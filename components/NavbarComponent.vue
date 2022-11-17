@@ -3,7 +3,7 @@
 <template>
     <header class="header">
         <nav class="navbar container">
-            <div class="navbar__logo">Logo</div>
+            <NuxtLink to="/" class="navbar__logo">Ever<span class="navbar__logo-log">Log</span></NuxtLink>
             <div class="navbar__search">
                 <input
                     type="text"
