@@ -56,20 +56,10 @@ const currentVariant = ref(data.value.variants[ 0 ].options[ 0 ]);
                     </div>
                 </div>
 
-                <!-- <div class="detail__variant">
-                    <p class="detail__variant-title">Size</p>
-                    <div class="detail__variant-options">
-                        <button class="detail__variant-option">L</button>
-                        <button class="detail__variant-option option-selected">
-                            XL
-                        </button>
-                    </div>
-                </div> -->
-
                 <div class="detail__stock">
                     <div class="detail__available">
                         Stock:
-                        <span class="detail__available-count">
+                        <span class="detail__available-count" :class="{ 'available-low' : data.stock <= 10 }">
                             {{ data.stock | '-' }}
                         </span>
                     </div>

@@ -1,5 +1,7 @@
 <script setup>
 const { data, pending, errors } = await useFetch('https://63759fb27e93bcb006b5da11.mockapi.io/products');
+const banners = 3;
+const bannerSelected = ref(0);
 const categories = computed(() => {
     const list = [];
     data.value.forEach(product => list.push(product.category))
@@ -13,6 +15,14 @@ const dataFiltered = computed(() => {
     return data.value.filter((product) => categorySelected.value.toLowerCase() === product.category.toLowerCase());
 });
 
+const nextBanner = () => {
+    bannerSelected.value++;
+    if (bannerSelected.value >= banners) return bannerSelected.value = 0;
+}
+const prevBanner = () => {
+    bannerSelected.value--;
+    if (bannerSelected.value < 0) return bannerSelected.value = banners - 1;
+}
 const selectCategory = (val) => {
     categorySelected.value = val;
 }
@@ -21,12 +31,14 @@ const selectCategory = (val) => {
 <template>
     <section class="section container">
         <div class="banner">
-            <div class="banner__pagination">
-                <div class="banner__dot banner-active"></div>
-                <div class="banner__dot"></div>
+            <div class="banner__content">
+                Banner {{ bannerSelected + 1 }}
             </div>
-            <button class="banner__navigation banner__next">&raquo;</button>
-            <button class="banner__navigation banner__prev">&laquo;</button>
+            <div class="banner__pagination">
+                <div class="banner__dot" :class="{ 'banner-active' : bannerSelected === index }" v-for="(dot, index) in banners" :key="dot"></div>
+            </div>
+            <button class="banner__navigation banner__prev" @click="prevBanner">&laquo;</button>
+            <button class="banner__navigation banner__next" @click="nextBanner">&raquo;</button>
         </div>
     </section>
 
