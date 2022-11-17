@@ -68,7 +68,7 @@ watch(() => quantity.value, value => {
                     <div class="detail__quantity">
                         <button class="detail__quantity-button" @click.prevent="decreaseQuantity"
                             :disabled="quantity < 1">&minus;</button>
-                        <input v-model="quantity" type="text" class="detail__quantity-input" placeholder="1" />
+                        <input v-model.number="quantity" type="number" class="detail__quantity-input" placeholder="1" />
                         <button class="detail__quantity-button" @click.prevent="increaseQuantity">&plus;</button>
                     </div>
                 </div>
