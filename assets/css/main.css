@@ -114,12 +114,13 @@ input:focus {
 }
 
 .navbar__logo {
-    font-size: 1.25rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
 .navbar__logo-log {
-    color: var(--text-color-lighter);
+    color: var(--primary-color-lighter-lighter);
     opacity: .75;
 }
 
