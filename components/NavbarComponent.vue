@@ -7,7 +7,7 @@ import UserIcon from "~icons/fa6-solid/user"
 const fireSwal = () => {
     Swal.fire({
         title: 'Sorry!',
-        text: 'Page is not available',
+        text: 'The page is not available yet.',
         icon: 'error',
         confirmButtonText: 'Close'
     });
@@ -15,6 +15,7 @@ const fireSwal = () => {
 </script>
 
 <template>
+    <!-- Top Navbar -->
     <header class="header">
         <nav class="navbar container">
             <NuxtLink to="/" class="navbar__logo">Ever<span class="navbar__logo-log">Log</span></NuxtLink>
@@ -34,6 +35,8 @@ const fireSwal = () => {
             </div>
         </nav>
     </header>
+
+    <!-- Bottom Navbar -->
     <div class="navbar__mobile">
         <NuxtLink to="/" class="navbar__mobile-item" :class="{ 'navbar-mobil-active' : $route.path === '/' }">
             <HomeIcon />
