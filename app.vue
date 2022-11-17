@@ -8,14 +8,14 @@ useHead({
 </script>
 
 <template>
-    <!-- <NuxtLayout> -->
-    <NuxtLoadingIndicator />
-    <div class="page-layout">
-        <NavbarComponent />
-        <main class="page-full">
-            <NuxtPage />
-        </main>
-        <FooterComponent />
+    <div>
+        <NuxtLoadingIndicator />
+        <div class="page-layout">
+            <NavbarComponent />
+            <main class="page-full">
+                <NuxtPage />
+            </main>
+            <FooterComponent />
+        </div>
     </div>
-    <!-- </NuxtLayout> -->
 </template>

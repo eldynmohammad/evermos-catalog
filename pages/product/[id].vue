@@ -2,11 +2,14 @@
 definePageMeta({
     middleware: 'check'
 });
+
 const route = useRoute();
 const { data, pending, errors } = await useFetch(`https://63759fb27e93bcb006b5da11.mockapi.io/products/${route.params.id}`);
 
 const quantity = ref(1);
 const currentImageIndex = ref(0);
+const currentVariant = ref(data.value.variants[ 0 ].options[ 0 ]);
+
 const selectImage = (val) => {
     currentImageIndex.value = val;
 }
@@ -22,8 +25,6 @@ watch(() => quantity.value, value => {
     if (value === '' | value === 0 | value === undefined | value === null) value = 1;
     if (value >= data.value.stock) quantity.value = data.value.stock;
 })
-
-const currentVariant = ref(data.value.variants[ 0 ].options[ 0 ]);
 </script>
 
 <template>
@@ -35,7 +36,7 @@ const currentVariant = ref(data.value.variants[ 0 ].options[ 0 ]);
                 </div>
                 <div class="detail__images-smalls">
                     <button class="detail__image" :class="{ 'image-selected' : currentImageIndex === index }"
-                        v-for="(image, index) in data.images" @click="selectImage(index)">
+                        v-for="(image, index) in data.images" @click.prevent="selectImage(index)">
                         <img :src="image" :alt="data.name" class="detail__image-img">
                     </button>
                 </div>
@@ -51,7 +52,7 @@ const currentVariant = ref(data.value.variants[ 0 ].options[ 0 ]);
                     <p class="detail__variant-title">{{ variant.name }}</p>
                     <div class="detail__variant-options">
                         <button class="detail__variant-option" :class="{ 'option-selected' : currentVariant === option }"
-                            v-for="option in variant.options" :key="option" @click="currentVariant = option">
+                            v-for="option in variant.options" :key="option" @click.prevent="currentVariant = option">
                             {{ option }}
                         </button>
                     </div>
@@ -65,10 +66,10 @@ const currentVariant = ref(data.value.variants[ 0 ].options[ 0 ]);
                         </span>
                     </div>
                     <div class="detail__quantity">
-                        <button class="detail__quantity-button" @click="decreaseQuantity"
+                        <button class="detail__quantity-button" @click.prevent="decreaseQuantity"
                             :disabled="quantity < 1">&minus;</button>
                         <input v-model="quantity" type="text" class="detail__quantity-input" placeholder="1" />
-                        <button class="detail__quantity-button" @click="increaseQuantity">&plus;</button>
+                        <button class="detail__quantity-button" @click.prevent="increaseQuantity">&plus;</button>
                     </div>
                 </div>
 

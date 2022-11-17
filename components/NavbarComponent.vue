@@ -41,11 +41,11 @@ const fireSwal = () => {
         <NuxtLink to="/" class="navbar__mobile-item" :class="{ 'navbar-mobil-active' : $route.path === '/' }">
             <HomeIcon />
         </NuxtLink>
-        <button class="navbar__mobile-item navbar__cart--mobile" @click="fireSwal">
+        <button class="navbar__mobile-item navbar__cart--mobile" @click.prevent="fireSwal">
             <CartIcon />
             <div class="navbar__cart-badge cart-badge-mobile">0</div>
         </button>
-        <button class="navbar__mobile-item" @click="fireSwal">
+        <button class="navbar__mobile-item" @click.prevent="fireSwal">
             <UserIcon />
         </button>
     </div>

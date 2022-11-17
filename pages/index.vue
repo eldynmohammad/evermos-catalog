@@ -39,8 +39,8 @@ const selectCategory = (val) => {
                     <div class="banner__dot" :class="{ 'banner-active' : bannerSelected === index }"
                         v-for="(dot, index) in banners" :key="dot"></div>
                 </div>
-                <button class="banner__navigation banner__prev" @click.stop="prevBanner">&laquo;</button>
-                <button class="banner__navigation banner__next" @click.stop="nextBanner">&raquo;</button>
+                <button class="banner__navigation banner__prev" @click.prevent="prevBanner">&laquo;</button>
+                <button class="banner__navigation banner__next" @click.prevent="nextBanner">&raquo;</button>
             </div>
         </section>
         
@@ -48,10 +48,11 @@ const selectCategory = (val) => {
             <h1 class="section__title">Categories</h1>
             <div class="categories">
                 <button class="categories__item" :class="{ 'category-active' : categorySelected === 'all' }"
-                    @click="selectCategory('all')">All</button>
+                    @click.prevent="selectCategory('all')">All</button>
                 <button class="categories__item" :class="{ 'category-active' : categorySelected === category }"
-                    v-for="(category, index) in categories" :key="index" @click="selectCategory(category)">{{ category
-                    }}</button>
+                    v-for="(category, index) in categories" :key="index" @click.prevent="selectCategory(category)">
+                    {{ category }}
+                </button>
             </div>
         </section>
         
