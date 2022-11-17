@@ -210,7 +210,6 @@ input:focus {
     width: 100%;
     background-color: white;
     padding: 1rem;
-    /* border-top: 4px solid var(--lighter-color); */
     box-shadow: 0 -.5rem .75rem rgba(0, 0, 0, 0.08);
     border-radius: var(--rounded-lg) var(--rounded-lg) 0 0;
     display: flex;
@@ -509,7 +508,7 @@ input:focus {
     color: white;
     padding: 1.25rem;
     transition: all .3s;
-    border-radius: var(--rounded-lg);
+    border-radius: var(--rounded-md);
 }
 
 .detail__checkout:hover {
@@ -560,7 +559,7 @@ input:focus {
     background-color: var(--primary-color);
     color: white;
     transition: all .3s ease-in;
-    border-radius: var(--rounded-lg);
+    border-radius: var(--rounded-md);
 }
 
 .not-found__button:hover {
