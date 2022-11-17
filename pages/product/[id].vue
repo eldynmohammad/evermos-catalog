@@ -41,6 +41,7 @@ watch(() => quantity.value, value => {
                     </button>
                 </div>
             </div>
+            
             <div class="detail__content">
                 <h1 class="detail__title">{{ data.name }}</h1>
                 <p class="detail__price">{{ useRupiahFormat(data.price) }}</p>

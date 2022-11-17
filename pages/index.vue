@@ -1,5 +1,9 @@
 <script setup>
+import ArrowLeftIcon from "~icons/fa6-solid/arrow-left-long"
+import ArrowRightIcon from "~icons/fa6-solid/arrow-right-long"
+
 const { data, pending, errors } = await useFetch('https://63759fb27e93bcb006b5da11.mockapi.io/products');
+
 const banners = 3;
 const bannerSelected = ref(0);
 const categories = computed(() => {
@@ -11,7 +15,6 @@ const categories = computed(() => {
 const categorySelected = ref('all');
 const dataFiltered = computed(() => {
     if (categorySelected.value === 'all') return data.value;
-
     return data.value.filter((product) => categorySelected.value.toLowerCase() === product.category.toLowerCase());
 });
 
@@ -30,6 +33,7 @@ const selectCategory = (val) => {
 
 <template>
     <div>
+        <!-- Banner -->
         <section class="section container">
             <div class="banner">
                 <div class="banner__content">
@@ -39,11 +43,16 @@ const selectCategory = (val) => {
                     <div class="banner__dot" :class="{ 'banner-active' : bannerSelected === index }"
                         v-for="(dot, index) in banners" :key="dot"></div>
                 </div>
-                <button class="banner__navigation banner__prev" @click.prevent="prevBanner">&laquo;</button>
-                <button class="banner__navigation banner__next" @click.prevent="nextBanner">&raquo;</button>
+                <button class="banner__navigation banner__prev" @click.prevent="prevBanner">
+                    <ArrowLeftIcon />
+                </button>
+                <button class="banner__navigation banner__next" @click.prevent="nextBanner">
+                    <ArrowRightIcon />
+                </button>
             </div>
         </section>
         
+        <!-- Categories -->
         <section class="section container">
             <h1 class="section__title">Categories</h1>
             <div class="categories">
@@ -56,6 +65,7 @@ const selectCategory = (val) => {
             </div>
         </section>
         
+        <!-- Product List -->
         <section class="section container">
             <h1 class="section__title">Product List</h1>
             <div class="products">
