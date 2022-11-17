@@ -42,8 +42,7 @@ body {
 }
 
 main {
-    padding-top: 5rem;
-    padding-bottom: 2.5rem;
+    padding-bottom: 7.5rem;
 }
 
 button {
@@ -54,7 +53,8 @@ button {
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    border-radius: var(--rounded-md);
+    border-radius: var(--rounded);
+    line-height: 1;
 }
 
 input {
@@ -64,6 +64,16 @@ input {
 
 input:focus {
     border: 2px solid var(--primary-color);
+}
+
+.page-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-full {
+    flex: 1;
 }
 
 /* ========== REUSABLE ========== */
@@ -88,7 +98,6 @@ input:focus {
 
 /* ========== NAVBAR ========== */
 .header {
-    position: fixed;
     width: 100%;
     height: 5rem;
     display: flex;
@@ -135,10 +144,11 @@ input:focus {
 }
 
 .navbar__cart {
+    padding: .5rem;
     position: relative;
-    margin-top: .5rem;
     border-radius: var(--rounded);
     color: var(--text-color);
+    background-color: transparent;
 }
 
 .navbar__cart--mobile {
@@ -152,8 +162,8 @@ input:focus {
 
 .navbar__cart-badge {
     position: absolute;
-    top: -0.5rem;
-    right: -0.5rem;
+    top: -0.15rem;
+    right: -0.15rem;
     padding: .25rem .45rem .15rem;
     border-radius: var(--rounded-full);
     font-size: 10px;
@@ -205,7 +215,7 @@ input:focus {
 }
 
 .navbar__mobile-item {
-    padding: .75rem 1rem;
+    padding: .75rem .85rem;
     line-height: 1;
     background-color: var(--lighter-color);
     border: 1px solid var(--lighter-color);
@@ -219,7 +229,7 @@ input:focus {
 /* ========== BANNER ========== */
 .banner {
     position: relative;
-    border-radius: var(--rounded-md);
+    border-radius: var(--rounded-lg);
     aspect-ratio: 2/1;
     background-color: var(--text-color);
 }
@@ -474,6 +484,7 @@ input:focus {
 
 .detail__quantity-button {
     font-size: 1.25rem;
+    line-height: 1.5;
     border-radius: 0;
 }
 
@@ -491,8 +502,9 @@ input:focus {
     width: 100%;
     background-color: var(--primary-color);
     color: white;
-    padding: 1rem 1.25rem;
+    padding: 1.25rem;
     transition: all .3s;
+    border-radius: var(--rounded-lg);
 }
 
 .detail__checkout:hover {
@@ -517,6 +529,39 @@ input:focus {
     color: white;
 }
 
+.not-found {
+    width: 100%;
+    padding: 8rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.not-found__title {
+    font-size: 5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.not-found__subtitle {
+    text-align: center;
+    color: var(--text-color-lighter);
+}
+
+.not-found__button {
+    margin-top: 2rem;
+    width: max-content;
+    padding: .85rem 1.25rem;
+    background-color: var(--primary-color);
+    color: white;
+    transition: all .3s ease-in;
+    border-radius: var(--rounded-lg);
+}
+
+.not-found__button:hover {
+    background-color: var(--primary-color-darker);
+}
+
 /* ==========   MEDIA QUERIES ========== */
 @media (min-width: 40rem) {
     .banner {
@@ -529,6 +574,14 @@ input:focus {
 }
 
 @media (min-width: 48rem) {
+    main {
+        padding-top: 5rem;
+        padding-bottom: 2.5rem;
+    }
+    .header {
+        position: fixed;
+    }
+
     .banner {
         aspect-ratio: 5/2;
     }

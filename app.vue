@@ -1,9 +1,21 @@
+<script setup>
+useHead({
+    title: 'EverLog',
+    meta: [
+        { name: 'description', content: 'Everlog Website.' }
+    ],
+});
+</script>
+
 <template>
-    <NuxtLayout>
+    <!-- <NuxtLayout> -->
+    <NuxtLoadingIndicator />
+    <div class="page-layout">
         <NavbarComponent />
-        <main>
+        <main class="page-full">
             <NuxtPage />
         </main>
         <FooterComponent />
-    </NuxtLayout>
+    </div>
+    <!-- </NuxtLayout> -->
 </template>

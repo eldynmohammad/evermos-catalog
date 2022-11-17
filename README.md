@@ -1,6 +1,9 @@
-# Nuxt 3 Minimal Starter
+# EverLog (Powered by Nuxt 3)
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+Everlog is a website that shows products catalog and the product detail.
+This website is built with [Nuxt 3](https://nuxt.com/), [MockAPI](https://mockapi.io) for the mockup API, images product from Unsplash.
+
+For the live website please visit: [This link](https://everlog.netlify.app/)
 
 ## Setup
 

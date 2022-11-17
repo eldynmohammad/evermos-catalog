@@ -1,8 +1,9 @@
 <script setup>
-const route = useRoute();
-const { data, pending, errors } = await useFetch(`https://63759fb27e93bcb006b5da11.mockapi.io/products/${route.params.id}`, {
-    server: true
+definePageMeta({
+    middleware: 'check'
 });
+const route = useRoute();
+const { data, pending, errors } = await useFetch(`https://63759fb27e93bcb006b5da11.mockapi.io/products/${route.params.id}`);
 
 const quantity = ref(1);
 const currentImageIndex = ref(0);

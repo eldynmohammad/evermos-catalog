@@ -4,6 +4,9 @@ import IconsResolver from "unplugin-icons/resolver";
 import Components from "unplugin-vue-components/vite";
 
 export default defineNuxtConfig({
+    generate: {
+        fallback: true,
+    },
     css: ["@/assets/css/main.css"],
     buildModules: [
         [

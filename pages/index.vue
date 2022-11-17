@@ -29,41 +29,46 @@ const selectCategory = (val) => {
 </script>
 
 <template>
-    <section class="section container">
-        <div class="banner">
-            <div class="banner__content">
-                Banner {{ bannerSelected + 1 }}
-            </div>
-            <div class="banner__pagination">
-                <div class="banner__dot" :class="{ 'banner-active' : bannerSelected === index }" v-for="(dot, index) in banners" :key="dot"></div>
-            </div>
-            <button class="banner__navigation banner__prev" @click="prevBanner">&laquo;</button>
-            <button class="banner__navigation banner__next" @click="nextBanner">&raquo;</button>
-        </div>
-    </section>
-
-    <section class="section container">
-        <h1 class="section__title">Categories</h1>
-        <div class="categories">
-            <button class="categories__item" :class="{ 'category-active' : categorySelected === 'all' }"
-                @click="selectCategory('all')">All</button>
-            <button class="categories__item" :class="{ 'category-active' : categorySelected === category }"
-                v-for="(category, index) in categories" :key="index" @click="selectCategory(category)">{{ category }}</button>
-        </div>
-    </section>
-
-    <section class="section container">
-        <h1 class="section__title">Product List</h1>
-        <div class="products">
-            <NuxtLink :to="`/product/${product.id}`" class="products__item" v-for="product in dataFiltered">
-                <div class="products__image">
-                    <img v-show="product.images[0]" :src="product.images[0]" class="products__image-img" :alt="product.name">
+    <div>
+        <section class="section container">
+            <div class="banner">
+                <div class="banner__content">
+                    Banner no. {{ bannerSelected + 1 }}
                 </div>
-                <div class="products__content">
-                    <p class="products__title">{{ product.name }}</p>
-                    <p class="products__price">{{ useRupiahFormat(product.price) }}</p>
+                <div class="banner__pagination">
+                    <div class="banner__dot" :class="{ 'banner-active' : bannerSelected === index }"
+                        v-for="(dot, index) in banners" :key="dot"></div>
                 </div>
-            </NuxtLink>
-        </div>
-    </section>
+                <button class="banner__navigation banner__prev" @click="prevBanner">&laquo;</button>
+                <button class="banner__navigation banner__next" @click="nextBanner">&raquo;</button>
+            </div>
+        </section>
+        
+        <section class="section container">
+            <h1 class="section__title">Categories</h1>
+            <div class="categories">
+                <button class="categories__item" :class="{ 'category-active' : categorySelected === 'all' }"
+                    @click="selectCategory('all')">All</button>
+                <button class="categories__item" :class="{ 'category-active' : categorySelected === category }"
+                    v-for="(category, index) in categories" :key="index" @click="selectCategory(category)">{{ category
+                    }}</button>
+            </div>
+        </section>
+        
+        <section class="section container">
+            <h1 class="section__title">Product List</h1>
+            <div class="products">
+                <NuxtLink :to="`/product/${product.id}`" class="products__item" v-for="product in dataFiltered">
+                    <div class="products__image">
+                        <img v-show="product.images[0]" :src="product.images[0]" class="products__image-img"
+                            :alt="product.name">
+                    </div>
+                    <div class="products__content">
+                        <p class="products__title">{{ product.name }}</p>
+                        <p class="products__price">{{ useRupiahFormat(product.price) }}</p>
+                    </div>
+                </NuxtLink>
+            </div>
+        </section>
+    </div>
 </template>
