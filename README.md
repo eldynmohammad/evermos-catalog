@@ -4,7 +4,7 @@ EverLog is a website that shows products catalog and product detail.
 This website is built with [Nuxt 3](https://nuxt.com/).
 For the API I'm using [MockAPI](https://mockapi.io) and images product from [Unsplash](https://unsplash.com/).
 
-For the live website please visit: [This link](https://everlog.netlify.app/).
+The live website can be accessed here: [EverLog](https://everlog.netlify.app/).
 
 ## Setup
 
