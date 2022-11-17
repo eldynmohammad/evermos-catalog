@@ -3,9 +3,9 @@
 :root {
     --base-color: 220;
 
-    --primary-color: hsl(var(--base-color), 54%, 56%);
-    --primary-color-darker: hsl(var(--base-color), 52%, 48%);
-    --primary-color-lighter: hsl(var(--base-color), 52%, 64%);
+    --primary-color: hsl(var(--base-color), 54%, 48%);
+    --primary-color-darker: hsl(var(--base-color), 52%, 42%);
+    --primary-color-lighter: hsl(var(--base-color), 52%, 56%);
     --light-color: hsl(var(--base-color), 48%, 91%);
     --lighter-color: hsl(var(--base-color), 48%, 96%);
     --lightest-color: hsl(var(--base-color), 48%, 99%);
@@ -534,7 +534,7 @@ input:focus {
 .footer {
     display: none;
     padding: 1.5rem 2rem;
-    background-color: var(--primary-color-lighter);
+    background-color: var(--primary-color-darker);
 }
 
 .footer__content {

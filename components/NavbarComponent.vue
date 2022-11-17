@@ -20,7 +20,7 @@ const fireSwal = () => {
         <nav class="navbar container">
             <NuxtLink to="/" class="navbar__logo">Ever<span class="navbar__logo-log">Log</span></NuxtLink>
             <div class="navbar__menu">
-                <button class="navbar__cart" @click="fireSwal">
+                <button class="navbar__cart" @click="fireSwal" aria-label="cart button">
                     <CartIcon class="navbar__cart-icon" />
                     <div class="navbar__cart-badge">0</div>
                 </button>
@@ -28,7 +28,7 @@ const fireSwal = () => {
                     <p class="navbar__greeting">
                         Hello, <span class="navbar__greeting-name">user</span>
                     </p>
-                    <button class="navbar__profile" @click="fireSwal">
+                    <button class="navbar__profile" @click="fireSwal" aria-label="profile button">
                         <UserIcon class="navbar__profile-icon" />
                     </button>
                 </div>
@@ -38,14 +38,15 @@ const fireSwal = () => {
 
     <!-- Bottom Navbar -->
     <div class="navbar__mobile">
-        <NuxtLink to="/" class="navbar__mobile-item" :class="{ 'navbar-mobil-active' : $route.path === '/' }">
+        <NuxtLink to="/" class="navbar__mobile-item" :class="{ 'navbar-mobil-active' : $route.path === '/' }"
+            aria-label="Home button">
             <HomeIcon />
         </NuxtLink>
-        <button class="navbar__mobile-item navbar__cart--mobile" @click.prevent="fireSwal">
+        <button class="navbar__mobile-item navbar__cart--mobile" @click.prevent="fireSwal" aria-label="cart button">
             <CartIcon />
             <div class="navbar__cart-badge cart-badge-mobile">0</div>
         </button>
-        <button class="navbar__mobile-item" @click.prevent="fireSwal">
+        <button class="navbar__mobile-item" @click.prevent="fireSwal" aria-label="profile button">
             <UserIcon />
         </button>
     </div>
