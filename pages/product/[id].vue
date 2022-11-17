@@ -21,6 +21,8 @@ watch(() => quantity.value, value => {
     if (value === '' | value === 0 | value === undefined | value === null) value = 1;
     if (value >= data.value.stock) quantity.value = data.value.stock;
 })
+
+const currentVariant = ref(data.value.variants[ 0 ].options[ 0 ]);
 </script>
 
 <template>
@@ -39,30 +41,22 @@ watch(() => quantity.value, value => {
             </div>
             <div class="detail__content">
                 <h1 class="detail__title">{{ data.name }}</h1>
-                <p class="detail__price">$ {{ data.price }}</p>
-                <!-- <div class="detail__stats">
-                                        <div class="detail__rate">
-                                            <p class="detail__rate-star">Star</p>
-                                            <p class="detail__rate-rating">5.0</p>
-                                        </div>
-                                        <p class="detail__sold"> | 300 Terjual</p>
-                                    </div> -->
+                <p class="detail__price">{{ useRupiahFormat(data.price) }}</p>
                 <p class="detail__description">
                     {{data.description}}
                 </p>
 
-                <div class="detail__variant">
-                    <p class="detail__variant-title">Color</p>
+                <div class="detail__variant" v-for="variant in data.variants" :key="variant">
+                    <p class="detail__variant-title">{{ variant.name }}</p>
                     <div class="detail__variant-options">
-                        <button class="detail__variant-option option-selected">
-                            Red
+                        <button class="detail__variant-option" :class="{ 'option-selected' : currentVariant === option }"
+                            v-for="option in variant.options" :key="option" @click="currentVariant = option">
+                            {{ option }}
                         </button>
-                        <button class="detail__variant-option">Blue</button>
-                        <button class="detail__variant-option">Green</button>
                     </div>
                 </div>
 
-                <div class="detail__variant">
+                <!-- <div class="detail__variant">
                     <p class="detail__variant-title">Size</p>
                     <div class="detail__variant-options">
                         <button class="detail__variant-option">L</button>
@@ -70,7 +64,7 @@ watch(() => quantity.value, value => {
                             XL
                         </button>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="detail__stock">
                     <div class="detail__available">

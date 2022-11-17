@@ -1,7 +1,5 @@
 <script setup>
-const { data, pending, errors } = await useFetch('https://63759fb27e93bcb006b5da11.mockapi.io/products', {
-    server: true
-});
+const { data, pending, errors } = await useFetch('https://63759fb27e93bcb006b5da11.mockapi.io/products');
 const categories = computed(() => {
     const list = [];
     data.value.forEach(product => list.push(product.category))
@@ -51,7 +49,7 @@ const selectCategory = (val) => {
                 </div>
                 <div class="products__content">
                     <p class="products__title">{{ product.name }}</p>
-                    <p class="products__price">$ {{ product.price }}</p>
+                    <p class="products__price">{{ useRupiahFormat(product.price) }}</p>
                 </div>
             </NuxtLink>
         </div>

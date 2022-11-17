@@ -1,5 +1,6 @@
 [
  {
+  "category": "fashion",
   "createdAt": "2022-11-16T11:14:18.697Z",
   "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
   "id": "1",
@@ -9,12 +10,21 @@
    "https://images.unsplash.com/photo-1521369909029-2afed882baee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
   ],
   "name": "Modern Granite Hat",
-  "price": "413.00",
-  "stock": 89915,
-  "category": "fashion",
-  "variants": []
+  "price": "25000",
+  "stock": 682,
+  "variants": [
+   {
+    "name": "type",
+    "options": [
+     "type 1",
+     "type 2",
+     "type 3"
+    ]
+   }
+  ]
  },
  {
+  "category": "fashion",
   "createdAt": "2022-11-17T00:57:39.097Z",
   "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
   "id": "2",
@@ -23,12 +33,21 @@
    "https://images.unsplash.com/photo-1617811449482-31093c8cee16?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
   ],
   "name": "Modern Wooden Towels",
-  "price": "571.00",
-  "stock": 7198,
-  "category": "fashion",
-  "variants": []
+  "price": "49000",
+  "stock": 88,
+  "variants": [
+   {
+    "name": "color",
+    "options": [
+     "black",
+     "white",
+     "random color"
+    ]
+   }
+  ]
  },
  {
+  "category": "furniture",
   "createdAt": "2022-11-16T21:55:22.091Z",
   "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
   "id": "3",
@@ -39,12 +58,20 @@
    "https://images.unsplash.com/photo-1594125674956-61a9b49c8ecc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
   ],
   "name": "Modern Bronze Table",
-  "price": "492.00",
-  "stock": 98814,
-  "category": "furniture",
-  "variants": []
+  "price": "319000",
+  "stock": 721,
+  "variants": [
+   {
+    "name": "Color",
+    "options": [
+     "black",
+     "wooden"
+    ]
+   }
+  ]
  },
  {
+  "category": "food",
   "createdAt": "2022-11-16T12:46:49.932Z",
   "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
   "id": "4",
@@ -54,12 +81,21 @@
    "https://images.unsplash.com/photo-1594007654729-407eedc4be65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=428&q=80"
   ],
   "name": "Unbranded Cotton Pizza",
-  "price": "988.00",
-  "stock": 43779,
-  "category": "food",
-  "variants": []
+  "price": "63500",
+  "stock": 8,
+  "variants": [
+   {
+    "name": "filling",
+    "options": [
+     "pepperoni",
+     "mushroom",
+     "pineapple"
+    ]
+   }
+  ]
  },
  {
+  "category": "other",
   "createdAt": "2022-11-16T10:22:41.929Z",
   "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
   "id": "5",
@@ -68,12 +104,20 @@
    "https://images.unsplash.com/photo-1541140532154-b024d705b90a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80"
   ],
   "name": "Elegant Cotton Keyboard",
-  "price": "797.00",
-  "stock": 48672,
-  "category": "other",
-  "variants": []
+  "price": "645000",
+  "stock": 79,
+  "variants": [
+   {
+    "name": "size",
+    "options": [
+     "60%",
+     "75%"
+    ]
+   }
+  ]
  },
  {
+  "category": "other",
   "createdAt": "2022-11-16T22:09:12.546Z",
   "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
   "id": "6",
@@ -82,12 +126,20 @@
    "https://images.unsplash.com/photo-1470054187619-8cf450e37193?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
   ],
   "name": "Bespoke Wooden Mouse",
-  "price": "389.00",
-  "stock": 31729,
-  "category": "other",
-  "variants": []
+  "price": "92000",
+  "stock": 371,
+  "variants": [
+   {
+    "name": "color",
+    "options": [
+     "black",
+     "white"
+    ]
+   }
+  ]
  },
  {
+  "category": "furniture",
   "createdAt": "2022-11-16T11:27:36.288Z",
   "description": "The Football Is Good For Training And Recreational Purposes",
   "id": "7",
@@ -97,12 +149,20 @@
    "https://images.unsplash.com/photo-1592078615290-033ee584e267?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"
   ],
   "name": "Rustic Soft Chair",
-  "price": "119.00",
-  "stock": 46833,
-  "category": "furniture",
-  "variants": []
+  "price": "85000",
+  "stock": 56,
+  "variants": [
+   {
+    "name": "type",
+    "options": [
+     "soft",
+     "hard"
+    ]
+   }
+  ]
  },
  {
+  "category": "food",
   "createdAt": "2022-11-16T20:51:09.666Z",
   "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
   "id": "8",
@@ -111,12 +171,20 @@
    "https://images.unsplash.com/photo-1613564834361-9436948817d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=443&q=80"
   ],
   "name": "Rustic Granite Pizza",
-  "price": "436.00",
-  "stock": 14211,
-  "category": "fashion",
-  "variants": []
+  "price": "115000",
+  "stock": 999,
+  "variants": [
+   {
+    "name": "filling",
+    "options": [
+     "cheese",
+     "extra cheese"
+    ]
+   }
+  ]
  },
  {
+  "category": "fashion",
   "createdAt": "2022-11-16T11:28:31.475Z",
   "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
   "id": "9",
@@ -126,12 +194,20 @@
    "https://images.unsplash.com/photo-1533603531139-2c4d04df8f16?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
   ],
   "name": "Incredible Granite Hat",
-  "price": "710.00",
-  "stock": 43653,
-  "category": "fashion",
-  "variants": []
+  "price": "85500",
+  "stock": 128,
+  "variants": [
+   {
+    "name": "color",
+    "options": [
+     "black",
+     "navy"
+    ]
+   }
+  ]
  },
  {
+  "category": "other",
   "createdAt": "2022-11-16T15:05:34.517Z",
   "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
   "id": "10",
@@ -140,9 +216,16 @@
    "https://images.unsplash.com/photo-1516567727245-ad8c68f3ec93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=449&q=80"
   ],
   "name": "Ergonomic Rubber Ball",
-  "price": "251.00",
-  "stock": 52106,
-  "category": "other",
-  "variants": []
+  "price": "283000",
+  "stock": 436,
+  "variants": [
+   {
+    "name": "Color",
+    "options": [
+     "white",
+     "orange"
+    ]
+   }
+  ]
  }
 ]
